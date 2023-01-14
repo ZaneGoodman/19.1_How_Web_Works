@@ -1,0 +1,44 @@
+1) Hypertext Transfer Protocol is the way we communicate between a computer/device and a browser. It is a set of communication rules. 
+
+2) A URL is a set of pieces to navigate to a website or reference something. It is made up of the Protocol, Hostname, Port, Resource, and optional Query. All these things aid in defining the URL and what it is pointing to on the WWW.
+
+3) Because the new IP addresses are very complex we need a way for humans to understand and interact with them. This is done by applying a host name to the IP address. Though, we need a way to translate the hostname to the IP and vice versa. This is done by the DNS(Domain name system) which is like the phonebook for the Web.
+
+4) A Query string is an optional way to be more specific in the content being searched. It can have multiple arguments separated by &. This is often portrayed when searching something specifically inside the Webpages search bar, form info, etc. It looks like this. ?x=1&y=2. 
+
+5) GET and POST: 
+    GET is the type of request that does not have any side effects. It does not change the server data. While POST is the opposite of that, it is changing the database/server data. GET request arguments are passed in the query string while POST is passed in the body. 
+    
+6) A request is when you point the browser to a webpage on a server. The browser will then make a request to that server. This is made up of the Method, HTTP protocol version, Resource URL desired, and headers.
+
+7) The server responds with the exact HTML text for that page either immediately or after it looks through a database server. This is made up of the HTTP protocol version, Response Status Code, and Headers.
+
+8) A Header gives more information in requests and responses. 
+    Response Headers: date, content-type, cache-control, server.
+    Request Headers: User-Agent, :method, referrer.
+
+9) The simplified version of the process when a URL is typed in a browser is as follows:
+
+    1. DNS translates the Hostname into the proper IP address
+    2. A request is sent to that IP address server using the URL resource and Headers(date/time, cookies)
+    3. The server then responds with the HTML and a response code(200,304, etc)
+    4. A DOM is created by the browser and separate requests are made for any other resources found by the browser from CSS, JS, ect. (links to images or other webpages)
+
+
+
+
+Part Two:
+1)
+curl https://icanhazdadjoke.com/search\?term\=pirate
+
+2)
+;; ANSWER SECTION:
+icanhazdadjoke.com.     0       IN      A       104.21.66.15
+icanhazdadjoke.com.     0       IN      A       172.67.198.173
+
+3)
+Serving HTTP on 0.0.0.0 port 8000 (http://0.0.0.0:8000/) ...
+127.0.0.1 - - [14/Jan/2023 08:49:38] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [14/Jan/2023 08:49:38] code 404, message File not found
+127.0.0.1 - - [14/Jan/2023 08:49:38] "GET /favicon.ico HTTP/1.1" 404 -
+127.0.0.1 - - [14/Jan/2023 08:49:53] "GET /serverTest.html HTTP/1.1" 200 -
